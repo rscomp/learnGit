@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Toast mAppToast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         // Do something in response to button click
         Context context = getApplicationContext();
-        CharSequence text = "Hello toast!";
+        CharSequence text = "";
         int duration = Toast.LENGTH_SHORT;
 
 
@@ -72,7 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+        if(mAppToast != null){
+            mAppToast.cancel();
+        }
+
+        mAppToast = Toast.makeText(context, text, duration);
+        mAppToast.show();
     }
 }

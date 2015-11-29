@@ -1,12 +1,12 @@
 package in.devxcode.myappportfolio;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,39 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user touches the button */
     public void sendMessage(View view) {
-        // Do something in response to button click
-        Context context = getApplicationContext();
-        CharSequence text = "";
-        int duration = Toast.LENGTH_SHORT;
-
-
-        switch (view.getId()){
-            case R.id.button:
-                text = "This button will launch Media Streamer app!";
-                break;
-            case R.id.button2:
-                text = "This button will launch Football Scores app!";
-                break;
-            case R.id.button3:
-                text = "This button will launch Library app!";
-                break;
-            case R.id.button4:
-                text = "This button will launch Gradle Project app!";
-                break;
-            case R.id.button5:
-                text = "This button will launch xyz reader app!";
-                break;
-            case R.id.button6:
-                text = "This button will launch my capstone app!";
-                break;
-
-        }
-
+        String toastMsg = "This button will launch " + ((Button)view).getText().toString();
         if(mAppToast != null){
             mAppToast.cancel();
         }
-
-        mAppToast = Toast.makeText(context, text, duration);
+        mAppToast = Toast.makeText(this, toastMsg, Toast.LENGTH_SHORT);
         mAppToast.show();
     }
 }

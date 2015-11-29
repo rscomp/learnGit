@@ -13,56 +13,65 @@
     tools:showIn="@layout/activity_main"
     android:background="#FFDFEAF1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/my_title"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="@dimen/abc_text_size_headline_material"
-        android:id="@+id/textView" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_title"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/abc_text_size_headline_material"
+                android:id="@+id/textView" />
 
-    <Button
-        style="@style/btn_style"
-        android:text="@string/media_streamer"
-        android:id="@+id/button"
-        android:layout_below="@id/textView"
-        android:onClick="sendMessage"/>
+            <Button
+                style="@style/btn_style"
+                android:text="@string/media_streamer"
+                android:id="@+id/button"
+                android:layout_below="@id/textView"
+                android:onClick="sendMessage"/>
 
-    <Button
-        style="@style/btn_style"
-        android:text="@string/super_duo1"
-        android:id="@+id/button2"
-        android:layout_below="@id/button"
-        android:onClick="sendMessage"/>
+            <Button
+                style="@style/btn_style"
+                android:text="@string/super_duo1"
+                android:id="@+id/button2"
+                android:layout_below="@id/button"
+                android:onClick="sendMessage"/>
 
-    <Button
-        style="@style/btn_style"
-        android:text="@string/super_duo2"
-        android:id="@+id/button3"
-        android:layout_below="@id/button2"
-        android:onClick="sendMessage"/>
+            <Button
+                style="@style/btn_style"
+                android:text="@string/super_duo2"
+                android:id="@+id/button3"
+                android:layout_below="@id/button2"
+                android:onClick="sendMessage"/>
 
-    <Button
-        style="@style/btn_style"
-        android:text="@string/ant_terminator"
-        android:id="@+id/button4"
-        android:layout_below="@id/button3"
-        android:onClick="sendMessage"/>
+            <Button
+                style="@style/btn_style"
+                android:text="@string/ant_terminator"
+                android:id="@+id/button4"
+                android:layout_below="@id/button3"
+                android:onClick="sendMessage"/>
 
-    <Button
-        style="@style/btn_style"
-        android:text="@string/materialize"
-        android:id="@+id/button5"
-        android:layout_below="@id/button4"
-        android:onClick="sendMessage"/>
+            <Button
+                style="@style/btn_style"
+                android:text="@string/materialize"
+                android:id="@+id/button5"
+                android:layout_below="@id/button4"
+                android:onClick="sendMessage"/>
 
-    <Button
-        style="@style/btn_style"
-        android:background="#D81B60"
-        android:text="@string/capstone"
-        android:id="@+id/button6"
-        android:layout_below="@id/button5"
-        android:onClick="sendMessage"/>
+            <Button
+                style="@style/btn_style"
+                android:background="#D81B60"
+                android:text="@string/capstone"
+                android:id="@+id/button6"
+                android:layout_below="@id/button5"
+                android:onClick="sendMessage"/>
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
